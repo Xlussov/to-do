@@ -22,6 +22,19 @@ const analitic = document.querySelector('.analitic')
 const analUl = document.querySelector('.analUl')
 const analUl2 = document.querySelector('.analUl2')
 
+
+
+const aut1 = document.querySelector('.aut1')
+const aut2 = document.querySelector('.aut2')
+const aut3 = document.querySelector('.aut3')
+
+const analiticData = document.querySelector('.analiticData')
+const noData = document.querySelector('.noData')
+
+let words = []
+let leter = []
+
+
 let a = 0
 let b = 1
 let lettersFun 
@@ -144,10 +157,15 @@ performed.addEventListener('click', ()=>{
 clear.addEventListener('click', ()=>{
    analUl.textContent = undefined
    analUl2.textContent = undefined
+   aut1.textContent = undefined
+   aut2.textContent = undefined
+   aut3.textContent = undefined
    lettersFun = undefined
-   letters = undefined
-   words1 = undefined
-   words2 = undefined
+   letters = {} 
+   // words1 = []
+   // words2 = []
+   // words = undefined
+   // leter = undefined
    const li = document.querySelectorAll('.todos li')
    for(i = 0; i < li.length; i++){
       li[i].remove()
@@ -197,6 +215,7 @@ toTodos.addEventListener('click', ()=>{
 })
 
 function toStr(go){
+   lettersFun = undefined
    const ul = document.querySelector('.todos')
    const ulLength = ul.children.length
    console.log(ul);
@@ -299,7 +318,13 @@ function addWords(){
 }
 
 function count(){
-   toStr(1)
+   // aut1.textContent = undefined
+   // aut2.textContent = undefined
+   // aut3.textContent = undefined
+   // words = undefined
+   // leter = undefined
+
+   toStr(0)
 
    const aut1 = document.querySelector('.aut1')
    const aut2 = document.querySelector('.aut2')
@@ -309,12 +334,16 @@ function count(){
    let words = []
    let leter = []
 
+   console.log(lettersFun);
    words.push(lettersFun.split(' '))
+
    leter.push(lettersFun.split(''))
 
    console.log(aut1.textContent = ul.children.length);
    aut2.textContent = words[0].length
    aut3.textContent = leter[0].length
+
+   // toStr(1)
 
    console.log(leter);
    console.log(words);
@@ -324,10 +353,18 @@ function count(){
 
 
 function startAnalitic(){
-   toStr(0)
-   addLetter()
-   addWords()
-   count()
+   if(ul.children.length !== 0){
+      analiticData.style.display = 'block'
+      noData.style.display =  'none'
+      console.log(aut1.children);
+      toStr(0)
+      addLetter()
+      addWords()
+      count()
+   }else {
+      analiticData.style.display = 'none'
+      noData.style.display = 'block'
+   }
 }
 
 

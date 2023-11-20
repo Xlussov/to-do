@@ -239,3 +239,7 @@ button:hover{
    padding: 0px;
    margin: 0px;
 }
+
+.noData p {
+   margin-left: 10px;
+}
