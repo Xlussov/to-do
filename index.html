@@ -1,0 +1,68 @@
+<DOCTYPE html!>
+    <head>
+        <title>To-Do List App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel = "Stylesheet" href = "main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+        <link rel = "shortcut icon" href="assets/favicon.ico">
+        <link rel="icon" type="image/gif" href="assests/animated_favicon1.gif" >
+     </head>
+    <body>
+        <div id="todo" class="todo">
+            <h1> MY TO-DO LIST <i id="pencil" class="fas fa-pencil-alt"></i> </h1>
+            <div class="nav">
+                <input class='lists' type="text" placeholder="Add New Todo">
+                <div style="display: flex; justify-content:space-around; margin-top: 5px;" class="buttons1">
+                <button class="filter all">oll</button>
+                <button class="filter active">active</button>
+                <button class="filter performed">performed</button>
+            </div>
+            
+           
+            <ul class="todos">
+                <!-- <li><span><i class="fas fa-trash-alt"></i></span><p class="content">Go to the salon</p><span class="changeItem item0">change</span></li> -->
+            </ul>
+        </div>
+        <div class="analitic">
+            <h2>Analitics of lleters:</h2>
+            <ul class="analUl"></ul>
+            <h2>Analitics of words:</h2>
+            <ul class="analUl2"></ul>
+            <h2>Count:</h2>
+            <div class="black">
+                <h4>To-do items:</h4>
+                <p class="aut1"></p>
+                <br>
+                <h4 >Words:</h4>
+                <p class="aut2"></p>
+                <br>
+                <h4 >Letters:</h4>
+                <p class="aut3"></p>
+            </div>
+        </div>
+            <div id= "buttons">
+                <button class="save">Save</button>
+                <button class="clear">Clear</button>
+                <button class="tipBtn">Tips</button>
+                <button class="toTodos">Back</button>
+                <button class="analit">Analitic</button>
+            </div>
+        </div>
+        
+        <div id = "overlay" class="tipsBlock">
+           <a href="#" class="closebtn">&#215;</a>
+           <div class="block">
+                <ul class="tips">
+                    <li>Click on the pencil to hide or show input area</li>
+                    <li>Type text into input area and press enter to add todo to list</li>
+                    <li>Hover over the todo and click the on trash can to delete</li>
+                    <li>Click the clear button to clear all todos from list</li>
+                    <li>Click the Save button to save your todos to access them later even if <br> you exit the browser </li>
+                 </ul>
+           </div>
+           
+        </div>
+        <script src="./js/main.js"></script>
+    </body>
