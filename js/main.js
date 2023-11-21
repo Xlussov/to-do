@@ -324,7 +324,7 @@ function count(){
    // words = undefined
    // leter = undefined
 
-   toStr(0)
+   toStr(1)
 
    const aut1 = document.querySelector('.aut1')
    const aut2 = document.querySelector('.aut2')
